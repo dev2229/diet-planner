@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block header %}{% endblock %} {% block content %}
+    
+   <div class="container">
+      <div class="bmi-result">
+        <h1
+          style="
+            text-align: center;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            font-family: sans-serif;
+          "
+        >
+          Result
+        </h1>
+        <div class="BMIcount">
+          <p
+            style="
+              font-weight: 700;
+              font-size: 72px;
+              line-height: 38px;
+              margin: 0px;
+              margin-top: 40px;
+            "
+          >
+            {{ bmi }}
+          </p>
+          <p style="font-weight: 700; font-size: 24px; line-height: 38px">
+            kg/m2
+          </p>
+        </div>
+        <p style="font-weight: 600; font-size: 28px">{{ health_status }}</p>
+        <div class="bmi-record">
+          <div class="values">
+            <p class="data">{{ gender }}</p>
+            <p class="recordlabels">Gender</p>
+          </div>
+          <div class="values">
+            <p class="data">{{ height }}</p>
+            <p class="recordlabels">Height</p>
+          </div>
+          <div class="values">
+            <p class="data">{{ weight }}</p>
+            <p class="recordlabels">weight</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+{% endblock %}

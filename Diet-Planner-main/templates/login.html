@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles/lognsignin.css" />
+    <link rel="icon" href="{{ url_for('static', filename='images/Logo-Primary.ico') }}" />
+    <title>Login</title>
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    <div class="logincontent">
+      <form action="{{ url_for('login.login') }}" method="POST" class="loginform">
+        <h1
+          style="
+            text-align: center;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            font-family: sans-serif;
+          "
+        >
+          Login
+        </h1>
+        <label
+          for="email"
+          style="
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            font-family: sans-serif;
+            margin-top: 30px;
+          "
+          >Email:</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="abc@gmail.com"
+          required
+        />
+
+        <label
+          for="password"
+          style="
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            font-family: sans-serif;
+            margin-top: 30px;
+          "
+          >Password:</label
+        >
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password#123"
+          required
+        />
+
+        <button type="submit" class="logsubmit">Login</button>
+
+        <p
+          style="
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 400;
+            font-family: sans-serif;
+            line-height: 45px;
+          "
+        >
+          <span style="font-size: 18px; color: #616161"
+            >Don’t have an account?</span
+          >
+          <span >
+            <a href="{{ url_for('login.signup') }}" style="text-decoration: none;color: #ea8930; font-size: 20px">
+            Sign Up
+            </a>
+        </span>
+        </p>
+      </form>
+      <div class="img">
+        <img src="{{ url_for('static', filename='/images/login.png') }}" alt="">
+      </div>
+    </div>
+
+
+
+    
+
+  </body>
+</html>

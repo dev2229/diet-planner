@@ -1,0 +1,15 @@
+# Ignore virtual environment
+.venv/
+venv/
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore editor-specific files
+.vscode/
+
+config.py
+
+.ipynb_checkpoints/
+
+.idea/

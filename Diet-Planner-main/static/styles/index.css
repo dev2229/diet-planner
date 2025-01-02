@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* hero section */
+.hero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.head{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.headline {
+ font-weight: 700;
+ font-size: 52px;
+ line-height: 60px;
+ text-align: center;
+ width: 60%;
+ height: max-content;
+}
+/* calculatorpart */
+.bmicalculator{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+
+    margin-top: 80px;
+}
+.maintext h1{
+font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    width: 90%;
+    
+}
+.sideA{
+width: 655px;
+}
+.subtext{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+/* Diet plan */
+.diet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dietline {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 60px;
+    text-align: center;
+}
+.images{
+    margin-bottom: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+}
+.diet button{
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid #EA8930; 
+    color: #EA8930;
+    width: 200px;
+    padding: 12px;
+    font-size: 24px;
+    font-family: sans-serif;
+    transition: all 1s ease;
+}
+.diet button:hover{
+    background-color: #EA8930;
+    color: white;
+}
+/* goal */
+.goal{
+       display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 80px;
+}
+.sideB{
+    width: 50%;
+}
+.sideB button{
+        border: 0px;
+        border-radius: 10px;
+        width: 150px;
+        padding: 12px;
+        font-size: 18px;
+        font-family: sans-serif;
+        transition: all 1s ease;
+}
+.learn{
+    background-color: transparent;
+    color: #ea8930
+}
+/* workout */
+.workout{
+         display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 200px;
+}
+.workout button {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid #EA8930;
+    color: #EA8930;
+    width: 200px;
+    padding: 12px;
+    font-size: 24px;
+    font-family: sans-serif;
+    transition: all 1s ease;
+}
+.diet button a {
+text-decoration: none;
+color: #EA8930;
+}
+
+.buttons a button  {
+    cursor: pointer;
+}
+
+.diet button a:hover {  
+color: white;
+}
+.workout button:hover {
+    background-color: #EA8930;
+    color: white;
+}
+.workoutimages {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    
+}
+
+.workoutline {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 60px;
+    text-align: left;
+}
+.workhead{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.workoutimages img{
+    margin: 10px;
+}
+.workoutimages a{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.workoutimages a:hover {
+   color: #EA8930;
+}
+/* extra */
+.extra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+.extrapartA{
+    width: 40%;
+    text-align: center;
+}

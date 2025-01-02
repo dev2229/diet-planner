@@ -1,0 +1,150 @@
+{% extends 'base.html' %} {% block header %}{% endblock %} {% block content %}
+<div class="container">
+  <div class="hero">
+    <div class="head">
+      <div class="headline">
+        <p>
+          Achieve Your Health Goals with
+          <span style="color: #ea8930"> FoodFit</span> - Your Personal
+          <span style="color: #ea8930"> Diet Planner </span>
+        </p>
+      </div>
+      <div style="font-size: 24px">
+        Take control of your diet and live a healthier life with FoodFit.
+      </div>
+    </div>
+    <div>
+      <img
+        src="{{ url_for('static', filename='/images/mainimg.png') }}"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="bmicalculator">
+    <div class="sideA">
+      <div class="maintext">
+        <h1>
+          Assess Your Health with Our
+          <span style="color: #ea8930">BMI Calculator</span>
+        </h1>
+        <p>
+          Easily determine your body mass index and track your progress towards
+          a healthier lifestyle.
+        </p>
+      </div>
+      <div class="subtext">
+        <div>
+          <h2>Why BMI ?</h2>
+          <p>
+            Our BMI calculator helps you understand if your weight is within a
+            healthy range.
+          </p>
+        </div>
+        <div>
+          <h2>Stay Informed</h2>
+          <p>
+            Access a curated list of articles and videos to support your health
+            journey.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename='/images/girl.png') }}" alt="" />
+    </div>
+  </div>
+  <div class="diet">
+    <div class="head">
+      <div class="dietline">
+        <p>
+          Exploring Optimal
+          <span style="color: #ea8930"> Diet Plans</span>
+        </p>
+      </div>
+      <div style="font-size: 24px">
+        Stay healthy with our informative blog posts.
+      </div>
+    </div>
+    <div class="images">
+      <div style="width: 27%">
+        <a href="https://medium.com/@RalucaA/10-delicious-and-nutritious-plant-based-meal-ideas-7fa2ad073999">
+        <img
+          src="{{ url_for('static', filename='/images/diet1.png') }}"
+          alt=""
+          style="height: 280px; width: 450px;"
+        />
+        </a>
+        <h3>10 Delicious and Nutritious Plant-Based Meal Ideas</h3>
+        <p>Delicious and Nutritious Plant-Based Meal Ideas to Boost Your Health</p>
+      </div>
+      <div style="width: 27%">
+        <a href="https://medium.com/@jennifermcdougall/the-importance-of-regular-exercise-routines-for-your-health-and-wellbeing-5f479b168bc1">
+        <img
+          src="{{ url_for('static', filename='/images/diet2.png') }}"
+          alt=""
+          style="height: 280px; width: 450px;"
+        />
+        </a>
+        <h3>The Importance of Regular Exercise Routines for Your Health and Wellbeing</h3>
+        <p>
+        In the realm of health and wellness, regular exercise is a cornerstone.
+        </p>
+      </div>
+      <div style="width: 27%">
+        <a href="https://medium.com/@yulifestyle/you-are-what-you-eat-how-diet-can-improve-symptoms-of-depression-c8c72bcd6bfc">
+        <img
+          src="{{ url_for('static', filename='/images/diet3.png') }}"
+          alt=""
+          style="height: 280px; width: 450px;"
+        />
+        </a>
+        <h3>You Are What You Eat</h3>
+        <p>
+          How Diet Can Improve Symptoms of Depression
+        </p>
+      </div>
+    </div>
+    <button ><a href="{{ url_for('resources') }}" >View all</a></button>
+  </div>
+  <div class="goal">
+    <div>
+      <img
+        src="{{ url_for('static', filename='/images/goalgirl.png') }}"
+        alt=""
+      />
+    </div>
+    <div class="sideB">
+      <div class="maintext">
+        <h1>
+          Achieve Your
+          <span style="color: #ea8930">Health Goals</span>
+          with FoodFit
+        </h1>
+        <p>
+          FoodFit offers personalized diet plans tailored to your specific needs
+          and goals. Whether you're looking to lose weight, gain muscle, or
+          improve your overall health, our expertly crafted plans will help you
+          achieve success.
+        </p>
+      </div>
+      <div class="buttons">
+        <a href="{{ url_for('resources') }}"><button style="background-color: #ea8930; color: white">Explore</button></a>
+        <a href="{{ url_for('resources') }}"><button class="learn" >Learn More ></button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="extra">
+    <div class="extrapartA">
+        <img src="{{ url_for('static', filename='/images/dumbble.png') }}" alt="" />
+        <h2>Discover the <span style="color: #ea8930">FoodFit</span>  App Experience</h2>
+        <p>Sign up for FoodFit and start your journey to a healthier lifestyle.</p>
+    </div>
+    <div class="extrapartA">
+        <img src="{{ url_for('static', filename='/images/watch.png') }}" alt="" />
+        <h2>Get Personalized <span style="color: #ea8930">Recommendations</span></h2>
+        <p>Receive tailored suggestions for healthy recipes, workout routines, and more.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

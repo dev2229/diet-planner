@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles/lognsignin.css" />
+    <link rel="icon" href="{{ url_for('static', filename='images/Logo-Primary.ico') }}" />
+    <title>Signup</title>
+  </head>
+
+  <body>
+    {% include 'nav.html' %}
+    <div class="signupcontent">
+      <form action="{{ url_for('login.signup_form') }}" method="POST" class="signupform">
+        <h1
+          style="
+            text-align: center;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            font-family: sans-serif;
+          "
+        >
+          Signup
+        </h1>
+        <label for="name" style="
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 25px;
+                    font-family: sans-serif;
+                    margin-top: 30px;
+                  ">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name" required />
+
+        <label for="mobile" style="
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 25px;
+                    font-family: sans-serif;
+                    margin-top: 30px;
+                  ">Mobile no.</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="1234567890" required  oninput="checkMobileNumber(this)"/>
+        <div id="mobileError" style="display:none; color:#EA8930;">Please enter a 10-digit mobile number</div>
+
+        <label
+          for="email"
+          style="
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            font-family: sans-serif;
+            margin-top: 30px;
+          "
+          >Email</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="abc@gmail.com"
+          required
+        />
+
+        <label
+          for="password"
+          style="
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            font-family: sans-serif;
+            margin-top: 30px;
+          "
+          >Password:</label
+        >
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password#123"
+          required
+        />
+
+                <label
+          for="password"
+          style="
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            font-family: sans-serif;
+            margin-top: 30px;
+          "
+          >Confirm Password:</label
+        >
+        <input
+          type="password"
+          id="confirm-password"
+          name="confirm-password"
+          placeholder="Confirm Password"
+          required
+        />
+        <button  type="submit" class="logsubmit" >Sign Up</button>
+
+        <p
+          style="
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 400;
+            font-family: sans-serif;
+            line-height: 45px;
+          "
+        >
+          <span style="font-size: 18px; color: #616161"
+            >Already have an account?</span
+          >
+          <span>
+            <a
+              href="{{ url_for('login.login') }}"
+              style="text-decoration: none; color: #ea8930; font-size: 20px"
+            >
+              Login
+            </a>
+          </span>
+        </p>
+      </form>
+      <div class="img">
+        <img src="{{ url_for('static', filename= '/images/signup.png') }}" alt="" />
+      </div>
+    </div>
+
+
+    <script>
+      function checkMobileNumber(input) {
+          var mobileNumber = input.value.replace(/\D/g, ''); // Remove non-digit characters
+          if (mobileNumber.length !== 10) {
+              document.getElementById('mobileError').style.display = 'block';
+          } else {
+              document.getElementById('mobileError').style.display = 'none';
+          }
+      }
+  </script>
+
+  </body>
+</html>

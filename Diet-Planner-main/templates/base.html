@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{{ url_for('static', filename='images/Logo-Primary.ico') }}" />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/base.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/index.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/dashboard.css') }}"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/bmi.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/resources.css') }}" />
+    <title>{% block title %}My Flask App{% endblock %}</title>
+  </head>
+  <body>
+    {% include 'nav.html' %}
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer>
+      <div class="footer">
+        <div class="upper">
+          <div class="footerlogo">
+            <a href="{{ url_for('hello') }}" style="width: 200px; height: 57px"
+              ><img src="static\images\Navbar.png" alt="Logo"
+            /></a>
+          </div>
+          <div class="submenu">
+            <a href="#">Healthy Recipes</a>
+            <a href="#">Fitness Tips</a>
+            <a href="#">Nutrition Guide</a>
+            <a href="#">Meal Plans</a>
+            <a href="#">Contact us</a>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="lower">
+            <p>© 2024 FoodFit. All rights reserved.</p>
+            <p>Privacy Policy</p>
+            <p>Terms and Conditions</p>
+            <p>Cookie Policy</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

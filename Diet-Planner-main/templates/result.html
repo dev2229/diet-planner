@@ -1,0 +1,158 @@
+{% extends 'base.html' %} {% block header %}{% endblock %} {% block content %}
+    
+    <div class="content">
+      <div class="result">
+        <h1
+          style="
+            text-align: center;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            font-family: sans-serif;
+          "
+        >
+          Result
+        </h1>
+        <div class="BMIcount">
+          <p
+            style="
+              font-weight: 700;
+              font-size: 72px;
+              line-height: 38px;
+              margin: 0px;
+              margin-top: 40px;
+            "
+          >
+            {{ bmi }}
+          </p>
+          <p style="font-weight: 700; font-size: 24px; line-height: 38px">
+            kg/m2
+          </p>
+        </div>
+        <p style="font-weight: 600; font-size: 28px">{{ health_status }}</p>
+        <div class="record">
+          <div class="top">
+            <div class="values">
+              <p class="data">{{ gender }}</p>
+              <p class="recordlabels">Gender</p>
+            </div>
+            <div class="values">
+              <p class="data">{{ height }}</p>
+              <p class="recordlabels">Height</p>
+            </div>
+            <div class="values">
+              <p class="data">{{ weight }}</p>
+              <p class="recordlabels">weight</p>
+            </div>
+          </div>
+          
+            <div class="daily-requirements">
+              <div class="faltu">
+                <div class="values">
+                  <p class="data">{{ daily_carbs['Protein calories'] }}g</p>
+                  <p class="recordlabels">Protiens:</p> 
+                </div>
+                <div class="values">
+                  <p class="data">{{ daily_carbs['Carbohydrate calories'] }}g</p>
+                  <p class="recordlabels">Carbohydrates: </p> 
+                </div>
+                <div class="values">
+                  <p class="data">{{ daily_carbs['Fat calories'] }}g</p>
+                  <p class="recordlabels">Fats: </p> 
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+      <div class="predictionsdiv">
+        <h1
+          style="
+            color: white;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            font-family: sans-serif;
+          "
+        >
+          Suggested Diet
+        </h1>
+        <div >
+          <ul>
+            {% for item in output %}
+            {% for key, value in item.items() %}
+            <li class="{% if 'meal' in item.keys() %}{{ 'meal' }}{% elif 'day' in item.keys() %}{{ 'day' }}{% else %}{{ 'predict' }}{% endif %}">
+
+              <strong>{{ key }}:</strong> {{ value }}<br>
+
+            </li>
+            {% endfor %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="goal">
+      
+      <div class="sideB">
+        <div class="maintext">
+          <h1>
+            Stay Motivated with Personalized Support
+          </h1>
+          <p>
+            Receive tailored suggestions for healthy recipes, workout routines, and more.
+          </p>
+        </div>
+        <div class="buttons">
+          <button style="background-color: #ffffff; color: #EE9748">Explore</button>
+          <button class="learn" style="color: #ffffff;">Learn More ></button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="{{ url_for('static', filename='/images/result.jpg') }}" alt=""/>
+        <div style="width: 60%;">
+        <p class="resultline">
+          Top 10 Muscle-Building Exercises For Beginners
+        </p>
+        <a href="https://medium.com/@copy.kolary/the-top-10-muscle-strengthening-exercises-for-every-major-muscle-group-7c96c5f29b6e" >Read More > </a>
+        </div>
+      </div>
+    </div> -->
+
+      <div class="workout">
+        <div class="workhead" style="width: 90%;">
+          <div class="workoutline">
+            <p>
+              Discover the Best
+              <span style="color: #ea8930">Workouts</span>
+            </p>
+          </div>
+          <div style="font-size: 24px; text-align: left">
+            Get Fit with These YouTube Videos
+          </div>
+        </div>
+        <div class="workoutimages">
+          <div style="width: 27%; margin-left: 20px">
+            <img src="{{ url_for('static', filename='/images/workout1.jpg') }}" style="height: 280px; width: 450px;" alt="" />
+            <h3>7 Fitness Habits That Will Change Your Life</h3>
+            <p>Health & Fitness Habits Hacks | Daily Healthy Tips</p>
+            <a href="https://youtu.be/-_VhU5rqyko?si=sIgVCicp5v0nGBGB">Visit ↗ </a>
+          </div>
+          <div style="width: 27%">
+            <img src="{{ url_for('static', filename='/images/workout2.jpg') }}" style="height: 280px; width: 450px;" alt="" />
+            <h3>What Happens When You Start Eating Healthy?</h3>
+            <p>Discover how a balanced diet can improve health.</p>
+            <a href="https://youtu.be/3DM3_ocFy0U?si=xImEniWkDs0p5Rwd">Visit ↗ </a>
+          </div>
+          <div style="width: 27%">
+           <img src="{{ url_for('static', filename='/images/workout3.jpg') }}" style="height: 280px; width: 450px;"
+              alt="" />
+            <h3>The Importance of Physical Activity</h3>
+            <p>Learn how exercise can benefit body and mind.</p>
+            <a href="https://youtu.be/rBUjOY12gJA?si=ki9XSgRRJSIzxAbP">Visit ↗ </a>
+          </div>
+        </div>
+        <button><a href="{{url_for("resources")}}" style="text-decoration: none; color: black">View all</a></button>
+      </div>
+
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'base.html' %} {% block header %}{% endblock %} {% block content %}
+    <div class="BMIcontent">
+      <form
+        action="{{ url_for('dashboard.bmicalculate') }}"
+        method="POST"
+        class="form"
+        
+      >
+        <h1
+          style="
+            text-align: center;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            font-family: sans-serif;
+          "
+        >
+          BMI Calculator
+        </h1>
+
+        <label
+          for="gender"
+          style="
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 25px;
+            font-family: sans-serif;
+            margin-top: 30px;
+          "
+          >Gender</label
+        >
+        <div class="gender" id="gender">
+          <div>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="Male" required />
+          </div>
+          <div>
+            <label for="female">Female</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="Female"
+              required
+            />
+          </div>
+        </div>
+
+        <label
+          for="weight"
+          style="
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 25px;
+            font-family: sans-serif;
+            margin-top: 30px;
+          "
+          >Weight</label
+        >
+        <input
+          type="number"
+          id="weight"
+          name="weight"
+          placeholder="Weight in KG"
+          required
+        />
+        <label
+          for="height"
+          style="
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 25px;
+            
+            font-family: sans-serif;
+            margin-top: 30px;
+          "
+          >Height</label
+        >
+        <input
+          type="number"
+          id="height"
+          name="height"
+          placeholder="Height in CM"
+          required
+        />
+        <button type="submit" class="calculate">Calculate</button>
+      </form>
+
+    </div>
+
+    <!-- <h1>Result</h1> -->
+     {% if output %}
+
+    <p> {{ output[0] }}</p>
+
+    {% endif %}
+{% endblock %}
